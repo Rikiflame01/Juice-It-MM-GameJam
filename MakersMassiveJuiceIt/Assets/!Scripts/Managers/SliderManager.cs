@@ -19,7 +19,7 @@ public class SliderManager : MonoBehaviour
         {
             StartCoroutine("drainBar");
         }
-        IncrementSlider(0.002f);
+        //IncrementSlider(0.002f);
     }
 
     public void IncrementSlider(float fruitVal)
