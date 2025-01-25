@@ -484,9 +484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c29011819fbe044912fafa1de29871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 0.1
-  shakeAmplitude: 0.1
-  shakeFrequency: 10
+  shakeDuration: 0.2
+  shakeAmplitude: 0.05
+  shakeFrequency: 5
   targetLayers:
   - Enemy
   - Player
