@@ -72,7 +72,7 @@ Material:
     - _Strength: 0.3
     - _WaveSpeed: 17
     m_Colors:
-    - _BaseColour: {r: 0, g: 1, b: 0.1360321, a: 0.42745098}
+    - _BaseColour: {r: 0.9056604, g: 0.44927037, b: 0, a: 0.42745098}
     - _Black: {r: 0, g: 0, b: 0, a: 0.9529412}
     - _DeepColour: {r: 0, g: 0.42827, b: 0.5924529, a: 0}
     - _ShallowColour: {r: 0, g: 0.55892533, b: 0.7735849, a: 1}

@@ -27,7 +27,7 @@ public class CollisionPlayer : MonoBehaviour
         if ((fruitLayerMask.value & (1 << collision.gameObject.layer)) != 0)
         {
             EventManager.TriggerScreenShake();
-            EventManager.TriggerIncreaseScore(1);
+            EventManager.TriggerIncreaseScore(0.06f);
             SoundManager.Instance.PlayRandomSFX(collision.transform.position);
             Debug.Log("Collided with an object on the Fruit layer: " + collision.gameObject.name);
 
