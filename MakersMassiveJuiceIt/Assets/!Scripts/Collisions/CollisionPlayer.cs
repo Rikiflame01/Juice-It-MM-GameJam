@@ -1,6 +1,7 @@
 using Mono.Cecil;
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CollisionPlayer : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class CollisionPlayer : MonoBehaviour
     public LayerMask fruitLayerMask;
 
     public GameObject fruitVfx;
+
+    public GameObject BananaSplatVfx;
+    public GameObject GreenSplatVfx;
+    public GameObject RedSplatVfx;
 
     public float scaleDuration = 0.3f;
 
@@ -30,9 +35,36 @@ public class CollisionPlayer : MonoBehaviour
             Debug.Log("Collided with an object on the Fruit layer: " + collision.gameObject.name);
 
             Vector3 collisionPoint = collision.contacts[0].point;
-            Instantiate(fruitVfx, collisionPoint, Quaternion.identity);
+            //Instantiate(fruitVfx, collisionPoint, Quaternion.identity);
+            SpawnSplatVfx(collision.gameObject, collisionPoint, Quaternion.identity);
 
             StartCoroutine(ScaleObject(collision.transform, collision.gameObject));
+        }
+    }
+
+    private void SpawnSplatVfx(GameObject gameobject, Vector3 transform, Quaternion quaternion)
+    {
+        switch (gameobject.tag)
+        {
+            case "Melon":
+                Instantiate(RedSplatVfx, transform, Quaternion.identity);
+                Debug.Log("Spawned splat vfx");
+                break;
+
+            case "Apple":
+                Instantiate(GreenSplatVfx, transform, Quaternion.identity);
+                Debug.Log("Spawned splat vfx");
+                break;
+
+            case "Banana":
+                Instantiate(BananaSplatVfx, transform, Quaternion.identity);
+                Debug.Log("Spawned splat vfx");
+                break;
+
+            case "Berry":
+                Instantiate(RedSplatVfx, transform, Quaternion.identity);
+                Debug.Log("Spawned splat vfx");
+                break;
         }
     }
 

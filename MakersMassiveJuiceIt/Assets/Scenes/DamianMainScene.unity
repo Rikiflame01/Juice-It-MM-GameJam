@@ -869,6 +869,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   fruitVfx: {fileID: 7398254074985398803, guid: 33f2de008ebbaf8449350d2f92112b14, type: 3}
+  BananaSplatVfx: {fileID: 2559318961666208664, guid: 68ea1d62d8bdf5b4a93e193efb92067a, type: 3}
+  GreenSplatVfx: {fileID: 8748911547970161032, guid: 5e5ba09e8a2bd784a952d1112cb0ed92, type: 3}
+  RedSplatVfx: {fileID: 7375970174483393333, guid: 0dd0a2cb756e85a40b7b4ed0e03c687b, type: 3}
   scaleDuration: 0.3
   targetScale: {x: 1, y: 1, z: 1}
   bananaPieces: {fileID: 6138560292533569651, guid: dd81a899a8507994cbc2a73f75aef016, type: 3}
@@ -1744,6 +1747,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   fruitVfx: {fileID: 7398254074985398803, guid: 33f2de008ebbaf8449350d2f92112b14, type: 3}
+  BananaSplatVfx: {fileID: 2559318961666208664, guid: 68ea1d62d8bdf5b4a93e193efb92067a, type: 3}
+  GreenSplatVfx: {fileID: 8748911547970161032, guid: 5e5ba09e8a2bd784a952d1112cb0ed92, type: 3}
+  RedSplatVfx: {fileID: 7375970174483393333, guid: 0dd0a2cb756e85a40b7b4ed0e03c687b, type: 3}
   scaleDuration: 0.3
   targetScale: {x: 1, y: 1, z: 1}
   bananaPieces: {fileID: 6138560292533569651, guid: dd81a899a8507994cbc2a73f75aef016, type: 3}
@@ -2241,7 +2247,7 @@ GameObject:
   - component: {fileID: 1785493749}
   - component: {fileID: 1785493748}
   - component: {fileID: 1785493747}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
