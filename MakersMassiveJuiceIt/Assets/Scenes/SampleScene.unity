@@ -851,6 +851,10 @@ MonoBehaviour:
   fruitVfx: {fileID: 7398254074985398803, guid: 33f2de008ebbaf8449350d2f92112b14, type: 3}
   scaleDuration: 0.3
   targetScale: {x: 1, y: 1, z: 1}
+  bananaPieces: {fileID: 6138560292533569651, guid: dd81a899a8507994cbc2a73f75aef016, type: 3}
+  applePieces: {fileID: 5377923862441916098, guid: 4d32228fbcb276d46bfc12d9c625cabb, type: 3}
+  melonPieces: {fileID: 2328990085971785478, guid: 700d533f2e8dd4a4489855b203c2f4d0, type: 3}
+  berryPieces: {fileID: 2582665416762383796, guid: 03470ae5f538f9749ab0b08ecdd15c1d, type: 3}
 --- !u!1 &457453449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,6 +1726,10 @@ MonoBehaviour:
   fruitVfx: {fileID: 7398254074985398803, guid: 33f2de008ebbaf8449350d2f92112b14, type: 3}
   scaleDuration: 0.3
   targetScale: {x: 1, y: 1, z: 1}
+  bananaPieces: {fileID: 6138560292533569651, guid: dd81a899a8507994cbc2a73f75aef016, type: 3}
+  applePieces: {fileID: 5377923862441916098, guid: 4d32228fbcb276d46bfc12d9c625cabb, type: 3}
+  melonPieces: {fileID: 2328990085971785478, guid: 700d533f2e8dd4a4489855b203c2f4d0, type: 3}
+  berryPieces: {fileID: 2582665416762383796, guid: 03470ae5f538f9749ab0b08ecdd15c1d, type: 3}
 --- !u!1 &1270290785
 GameObject:
   m_ObjectHideFlags: 0

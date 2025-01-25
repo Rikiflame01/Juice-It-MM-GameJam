@@ -11,12 +11,14 @@ public class CollisionPlayer : MonoBehaviour
 
     public float scaleDuration = 0.3f;
 
+    private int spawnNumber = 5;
+
     public Vector3 targetScale = new Vector3(1f, 1f, 1f);
 
-    public GameObject[] bananaPieces;
-    public GameObject[] applePieces;
-    public GameObject[] melonPieces;
-    public GameObject[] berryPieces;
+    public GameObject bananaPieces;
+    public GameObject applePieces;
+    public GameObject melonPieces;
+    public GameObject berryPieces;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -56,21 +58,42 @@ public class CollisionPlayer : MonoBehaviour
         switch (collisionGameObject.gameObject.tag)
         {
             case "Melon":
-                Debug.Log("Collided with Player");
+                for (int i = 0; i < spawnNumber; i++)
+                {
+                    GameObject randomGameObject = melonPieces;
+                    Transform randomPosition = target.transform;
+                    Instantiate(randomGameObject, randomPosition.position, Quaternion.identity);
+                }
                 break;
 
             case "Apple":
-                Debug.Log("Collided with Enemy");
+                for (int i = 0; i < spawnNumber; i++)
+                {
+                    GameObject randomGameObject = applePieces;
+                    Transform randomPosition = target.transform;
+                    Instantiate(randomGameObject, randomPosition.position, Quaternion.identity);
+                }
                 break;
 
             case "Banana":
-                Debug.Log("Collided with Enemy");
+                for (int i = 0; i < spawnNumber; i++)
+                {
+                    GameObject randomGameObject = bananaPieces;
+                    Transform randomPosition = target.transform;
+                    Instantiate(randomGameObject, randomPosition.position, Quaternion.identity);
+                }
                 break;
 
             case "Berry":
-                Debug.Log("Collided with Enemy");
+                for (int i = 0; i < spawnNumber; i++)
+                {
+                    GameObject randomGameObject = berryPieces;
+
+                    Transform randomPosition = target.transform;
+                    Instantiate(randomGameObject, randomPosition.position, Quaternion.identity);
+                }
                 break;
         }
-
+        collisionGameObject.gameObject.SetActive(false);
     }
 }
