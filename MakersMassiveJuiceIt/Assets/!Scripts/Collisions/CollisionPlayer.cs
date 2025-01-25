@@ -1,14 +1,11 @@
 using Mono.Cecil;
 using System.Collections;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class CollisionPlayer : MonoBehaviour
 {
 
     public LayerMask fruitLayerMask;
-
-    public GameObject fruitVfx;
 
     public GameObject BananaSplatVfx;
     public GameObject GreenSplatVfx;
@@ -35,7 +32,6 @@ public class CollisionPlayer : MonoBehaviour
             Debug.Log("Collided with an object on the Fruit layer: " + collision.gameObject.name);
 
             Vector3 collisionPoint = collision.contacts[0].point;
-            //Instantiate(fruitVfx, collisionPoint, Quaternion.identity);
             SpawnSplatVfx(collision.gameObject, collisionPoint, Quaternion.identity);
 
             StartCoroutine(ScaleObject(collision.transform, collision.gameObject));
