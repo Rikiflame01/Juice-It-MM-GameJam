@@ -63,6 +63,8 @@ Material:
     - _Depth: 1
     - _Displacement: 6.01
     - _GradientNoiseScale: 20
+    - _NormalMapMainSpeed: 5
+    - _NormalMapSecondarySpeed: 9
     - _NormalStrength: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
