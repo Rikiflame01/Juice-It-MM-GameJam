@@ -1,3 +1,4 @@
+using Mono.Cecil;
 using System.Collections;
 using UnityEngine;
 
@@ -12,6 +13,11 @@ public class CollisionPlayer : MonoBehaviour
 
     public Vector3 targetScale = new Vector3(1f, 1f, 1f);
 
+    public GameObject[] bananaPieces;
+    public GameObject[] applePieces;
+    public GameObject[] melonPieces;
+    public GameObject[] berryPieces;
+
     private void OnCollisionEnter(Collision collision)
     {
         if ((fruitLayerMask.value & (1 << collision.gameObject.layer)) != 0)
@@ -22,11 +28,11 @@ public class CollisionPlayer : MonoBehaviour
             Vector3 collisionPoint = collision.contacts[0].point;
             Instantiate(fruitVfx, collisionPoint, Quaternion.identity);
 
-            StartCoroutine(ScaleObject(collision.transform));
+            StartCoroutine(ScaleObject(collision.transform, collision.gameObject));
         }
     }
 
-    private IEnumerator ScaleObject(Transform target)
+    private IEnumerator ScaleObject(Transform target, GameObject collisionGameObject)
     {
         Vector3 originalScale = target.localScale;
         float elapsedTime = 0f;
@@ -42,13 +48,29 @@ public class CollisionPlayer : MonoBehaviour
 
         elapsedTime = 0f;
 
-        while (elapsedTime < scaleDuration)
+        ExplodeAndDespawn(target, collisionGameObject);
+    }
+
+    private void ExplodeAndDespawn(Transform target, GameObject collisionGameObject)
+    {
+        switch (collisionGameObject.gameObject.tag)
         {
-            target.localScale = Vector3.Lerp(targetScale, originalScale, elapsedTime / scaleDuration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            case "Melon":
+                Debug.Log("Collided with Player");
+                break;
+
+            case "Apple":
+                Debug.Log("Collided with Enemy");
+                break;
+
+            case "Banana":
+                Debug.Log("Collided with Enemy");
+                break;
+
+            case "Berry":
+                Debug.Log("Collided with Enemy");
+                break;
         }
 
-        target.localScale = originalScale;
     }
 }
